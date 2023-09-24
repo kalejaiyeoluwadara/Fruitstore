@@ -8,7 +8,17 @@ import nav from './assets/nav.png'
 function Avocado() {
   const [sta,setSta] = useState(2)
     return (
-      <div className="bg-white  py-3 h-screen  px-12 w-screen overflow-x-hidden ">
+      <motion.div
+        initial={{
+          opacity:0
+        }}
+        animate={{
+          opacity:1
+        }}
+        transition={{
+                  duration: 0.3,
+                }}
+       className="bg-white  py-3 h-screen  px-12 w-screen overflow-x-hidden ">
         <nav className="flex justify-between mt-4 items-center ">
           <div className="bg-yellow-200 px-2 py-3 rounded-[50%] flex items-center justify-center  h-[50px] w-[50px]  ">
             <img src={ic} alt="" />
@@ -96,7 +106,7 @@ function Avocado() {
             <img className="h-[30px]" src={mouse} alt="" />
           </div>
         </footer>
-      </div>
+      </motion.div>
     );
 }
 
